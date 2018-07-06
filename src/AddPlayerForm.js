@@ -30,15 +30,15 @@ class AddPlayerForm extends Component {
 		return (
 			<div className="add-player-form">
 				<form
-					onSubmit={function(e) {
-						this.addPlayer(e);
-					}.bind(this)}>
+					onSubmit= {(e) => 
+						this.addPlayer(e)
+					}>
 					<input
 						type="text"
 						value={this.state.name}
-						onChange={function(e) {
-							this.onNameChange(e);
-						}.bind(this)} />
+						onChange={(e) =>
+							this.onNameChange(e)
+						} />
 					<input type="submit" value="Add Player" />
 				</form>
 			</div>
